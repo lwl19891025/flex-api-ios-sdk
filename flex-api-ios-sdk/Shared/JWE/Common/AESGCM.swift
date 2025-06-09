@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CybersourceFlexSDK_Private
 
 func aesGcmEncrypt(plaintext: Data, key: Data, iv: Data, tagLen: Int, aad: Data) throws -> (ciphertext: Data, tag: Data) {
     let cipheredRawData: CybsAGCipheredData?

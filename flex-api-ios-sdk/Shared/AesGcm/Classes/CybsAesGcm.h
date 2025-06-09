@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CybsAGCipheredData.h"
+#import <CybsAGCipheredData.h>
 
 /**
  This class provides the methods that implement the GCM algorithm with AES.

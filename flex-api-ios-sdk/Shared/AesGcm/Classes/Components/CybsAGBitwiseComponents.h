@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CybsAGTypes.h"
+#import <CybsAGTypes.h>
 
 /**
  Number of bits in a byte ... obviously 8 ... the only purpose of this constant is to easily track where this value is used and what for.

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CybsAGTypes.h"
+#import <CybsAGTypes.h>
 
 /**
  Use the methods in this class to converts integers from/to GCM format to/from the host’s native byte order.

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CybsAGTypes.h"
+#import <CybsAGTypes.h>
 
 /**
  Mathematical components used by the authenticated encryption and authenticated decryption functions.

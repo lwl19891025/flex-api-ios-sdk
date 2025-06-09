@@ -7,19 +7,19 @@
 
 import Foundation
 
-public class FlexErrorResponse: Equatable, Decodable, Error {
+@objc public class FlexErrorResponse: NSObject, Decodable, Error {
     public static func == (lhs: FlexErrorResponse, rhs: FlexErrorResponse) -> Bool {
         lhs.responseStatus == rhs.responseStatus
     }
     
-    public let responseStatus: ResponseStatus
+    @objc public let responseStatus: ResponseStatus
         
     public init(status: ResponseStatus) {
         self.responseStatus = status
     }
 }
 
-public class ResponseStatus: Equatable, Decodable {
+@objc public class ResponseStatus: NSObject, Decodable {
     public static func == (lhs: ResponseStatus, rhs: ResponseStatus) -> Bool {
         lhs.status == rhs.status &&
         lhs.reason == rhs.reason &&
@@ -29,13 +29,13 @@ public class ResponseStatus: Equatable, Decodable {
         lhs.details == rhs.details
     }
     
-    public let status: Int
-    public let reason: String
-    public let message: String
-    public let domain: String?
+    @objc public let status: Int
+    @objc public let reason: String
+    @objc public let message: String
+    @objc public let domain: String?
 
-    public let correlationId: String?
-    public var details: [ResponseStatusDetail]? = [ResponseStatusDetail]()
+    @objc public let correlationId: String?
+    @objc public var details: [ResponseStatusDetail]? = [ResponseStatusDetail]()
     
     init(status: Int, reason: String, message: String, domain: String? = nil, correlationId: String? = nil, details: [ResponseStatusDetail]? = nil) {
         self.status = status
@@ -47,7 +47,7 @@ public class ResponseStatus: Equatable, Decodable {
     }
 }
 
-public class ResponseStatusDetail: Equatable, Decodable {
+@objc public class ResponseStatusDetail: NSObject, Decodable {
     public static func == (lhs: ResponseStatusDetail, rhs: ResponseStatusDetail) -> Bool {
         lhs.location == rhs.location &&
         lhs.message == rhs.message

@@ -7,13 +7,13 @@
 
 import Foundation
 
-public class TransientToken: Equatable {
+@objc public class TransientToken: NSObject {
     public static func == (lhs: TransientToken, rhs: TransientToken) -> Bool {
         lhs.token == rhs.token
     }
     
-    public let token: String
-    
+    @objc public let token: String
+
     init(token: String) {
         self.token = token
     }
